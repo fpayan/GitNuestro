@@ -1,6 +1,6 @@
-#Readme.md
+# Readme.md
 
-###Ejercicio 1 - Respuestas a las preguntas.
+### Ejercicio 1 - Respuestas a las preguntas.
 
 -
 -
@@ -15,7 +15,7 @@
 git reset --hard HEAD~1
 
 ```
-####El porque:
+#### El porque:
 
 Para deshacer el último commit y volver al commit anterior donde estaba el HEAD, es decir, el último commit echo en la rama styled.
 >Con el flag **--hard** limpiamos el working area y se eliminan los cambios hechos en ese commit.
@@ -54,7 +54,7 @@ git branch -d restore -> command 6ª
 
 ```
 
-####El porque:
+#### El porque:
 * 1- Para ver el id del commit ha restaurar o donde nos queremos posicionar y copiarlo. Para eso uso **reflog**
 * 2 - Para mover el puntero sobre o hacia el commit en el cual deseo posicionarme para en este caso restablecer el último **reset --hard HEAD~1**
 * 3 - Creo una rama nueva lamada **restore** en la misma posición donde esta ahora el **HEAD** ya que después de hacer el checkout me ha devuelto un **detached HEAD** informando que puedo tener en mi repo desfaces en cuanto a commit o punteros con respecto al HEAD del repo, es decir, me encuentro con un puntero que tiene **782f1d5** como identificador y no una rama o branch, es por eso que me informa que puedo crear una rama y una vez mergeada *(absorbida)*, con la rama *styled* puedo eliminar y así tener todos los cambios en una rama o puntero correcto.
@@ -73,7 +73,7 @@ git merge master
 
 ```
 
-####El porque:
+#### El porque:
 El merge de la rama **master** por la rama **styled** no produjo ningún error o conflicto. Debido a que el puntero o **HEAD** donde estoy ahora esta o es ascentro del puntero o commit donde esta ahora mismo master, es decir, la rama **styled** tiene ya el último commit que tiene la rama **master** y no se produce ningún cambio.
 
 -
@@ -90,9 +90,9 @@ git merge htmlify
 
 ```
 
-####Causó algún conflicto:
+#### Causó algún conflicto:
 Si, se dió un conflicto al hacer el merge desde la rama **styled** que absorbio la rama **htmlify** 
-####Qué lo provoco:
+#### Qué lo provoco:
 Se produjo porque en ambas ramas existe un archivo con el mismo nombre **git-nuestro.md** y ambos archivos tienen lineas distintas y no concordantes el uno con el otro, es decir, la linea uno es distinta en ambos archivos *(esto se puede dar en n lineas del archivo)* y git no sabe como dejar, o corregir este diléma, así que deja en manos de nosotros que solucionemos este conflicto editando las lineas que dan el conflicto. 
 
 Una vez resuelto el conflicto entonces debemos hacer un **add** seguido de un **commit**.
@@ -112,7 +112,7 @@ git merge styled
 
 ```
 
-####Causó algún conflicto:
+#### Causó algún conflicto:
 No hubo conflicto. La salida fué la siguente:
 
 ```
@@ -125,7 +125,7 @@ Fast-forward
 
 Como se puede apreciar se hizo un fast-forward.
 
-####Qué lo provoco:
+#### Qué lo provoco:
 El **Fast-forward** se produce cuando se hace un merge de una rama, en este caso de **master** que absorbe a la rama **styled**. Y en la rama que absorbe *(master)* no hay ningún commit desde el momento que se creo la rama hija en este caso *(styled)* por lo tanto lo único que se hace es añadir todos los commit de la rama *(styled)* dentro de la rama *(master)* y el **HEAD** pasa a ser el último commit de la rama que se absorbe, en este caso *(styled)*.
 
 ```
@@ -165,9 +165,9 @@ git log --graph --decorate --pretty=oneline
 git merge --no-ff title
 
 ```
-####Podría haber sido un Fast-forward?:
+#### Podría haber sido un Fast-forward?:
 Si.
-####Por qué?:
+#### Por qué?:
 Porque desde que se creo la rama **title** desde la rama **master** en la rama padre *(master)* no se ha hecho ningún commit, por lo tanto todos los commit hechos en la rama *(title)* se hubieran podido añadir a la linea de tiempo de la rama *master* con total certeza que no perjudica en nada el transcurrir de los commit en la linea de tiempo de dicha rama.
 
 -
