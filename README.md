@@ -2,9 +2,7 @@
 
 ### Ejercicio 1 - Respuestas a las preguntas.
 
--
--
-
+--------
 
 - ¿Qué comando utilizaste en el paso 11? ¿Por qué?
 
@@ -20,7 +18,7 @@ git reset --hard HEAD~1
 Para deshacer el último commit y volver al commit anterior donde estaba el HEAD, es decir, el último commit echo en la rama styled.
 >Con el flag **--hard** limpiamos el working area y se eliminan los cambios hechos en ese commit.
 
--
+-------
 - ¿Qué comando o comandos utilizaste en el paso 12? ¿Por qué?
 
 	- **12) Rehacer el último commit (el que acabamos de deshacer)**
@@ -64,7 +62,7 @@ git branch -d restore -> command 6ª
 
 > Después he hecho un **git status** para ver si todo era correcto y un **git log** para ver que el commit aparece. Todo ok !
 
--
+-------
 - El merge del paso 13, ¿Causó algún conflicto? ¿Por qué?
 	* **13) Hacer un merge con ‘master’ (styled absorbe a master)**
 
@@ -76,7 +74,7 @@ git merge master
 #### El porque:
 El merge de la rama **master** por la rama **styled** no produjo ningún error o conflicto. Debido a que el puntero o **HEAD** donde estoy ahora esta o es ascentro del puntero o commit donde esta ahora mismo master, es decir, la rama **styled** tiene ya el último commit que tiene la rama **master** y no se produce ningún cambio.
 
--
+-------
 - El merge del paso 19, ¿Causó algún conflicto? ¿Por qué?
 	* **19) Hacer un merge de “htmlify” en “styled” (styled absorbe a htmlify)**
 
@@ -98,7 +96,7 @@ Se produjo porque en ambas ramas existe un archivo con el mismo nombre **git-nue
 Una vez resuelto el conflicto entonces debemos hacer un **add** seguido de un **commit**.
 
 
--
+-------
 - El merge del paso 21, ¿Causó algún conflicto? ¿Por qué?
 	* **21) Desde “master”, hacer un merge con “styled”**
 
@@ -148,7 +146,7 @@ O---O---O---*O
 
 ```
 
--
+-------
 - ¿Qué comando o comandos utilizaste en el paso 25?
 	* **25) Dibujar el diagrama**
 
@@ -157,7 +155,7 @@ git log --graph --decorate --pretty=oneline
 
 ```
 
--
+-------
 - El merge del paso 26, ¿Podría ser fast forward? ¿Por qué?
 	* **26) Hacer un merge “no fast-forward” de “title” en “master” (master absorbe a title)**
 
@@ -170,7 +168,7 @@ Si.
 #### Por qué?:
 Porque desde que se creo la rama **title** desde la rama **master** en la rama padre *(master)* no se ha hecho ningún commit, por lo tanto todos los commit hechos en la rama *(title)* se hubieran podido añadir a la linea de tiempo de la rama *master* con total certeza que no perjudica en nada el transcurrir de los commit en la linea de tiempo de dicha rama.
 
--
+-------
 - ¿Qué comando o comandos utilizaste en el paso 27?
 	* **27) Deshacer el merge (sin perder los cambios del working copy)**
 
@@ -179,7 +177,7 @@ git reset HEAD~1
 
 ```
 
--
+-------
 - ¿Qué comando o comandos utilizaste en el paso 28? 
 	* **28) Descartar los cambios**
 
@@ -217,7 +215,7 @@ git commit -> open with nano edit.
 
 ```
 
--
+-------
 - ¿Qué comando o comandos utilizaste en el paso 29?
 	* **29) Eliminar la rama “title”**
 
@@ -228,7 +226,7 @@ git branch -D title
 
 >Con el flag -D eliminamos la rama de forma fozosa y se pierden los datos.
 
--
+-------
 - ¿Qué comando o comandos utilizaste en el paso 30?
 	* **30) Rehacer el merge que hemos deshecho**
 
@@ -247,7 +245,7 @@ git log
 
 ```
 
--
+-------
 - ¿Qué comando o comandos usaste en el paso 32?
 	* **32) Volver al commit inicial cuando se creó el poema**
 
@@ -266,7 +264,7 @@ git log
 
 ```
 
--
+-------
 - ¿Qué comando o comandos usaste en el punto 33?
 	* **33) Volver al estado final, cuando pusimos título al poema**
 
